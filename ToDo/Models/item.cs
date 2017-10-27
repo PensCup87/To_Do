@@ -15,5 +15,9 @@ namespace ToDo.Models
         public string ItemDetails { get; set; }
         public bool ItemIsDone { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Schema.ForeignKey("List")]
+        public int ListId { get; set; }
+        public virtual List List { get; set; }
+
     }
 }
